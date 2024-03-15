@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("2.jpg");
+            /* background-position: right; */
+            background-color: #c7b1ca;
+            padding: 1px;
+        }
+
+        header {
+            background-color: white;
+            color: rgb(0, 0, 0);
+            padding: 0px 0;
+            position: fixed;
+            width:100%;
+            z-index: 100;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0b080c;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            background-color: #e6d1e9;
+            border-radius: 4px;
+            color: white;
+        }
+
+
+        .app_form {
+            width: 500px;
+            padding: 20px;
+            background-color: rgba(124, 117, 122, 0.805);
+            margin: auto;
+            margin-top: 25px;
+            border: 1px solid black;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .text {
+            text-align: center;
+            width: 43%;
+        }
+
+        .img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #d7a6dd;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <div class="logo">
+            SMV ART GALLERY
+        </div>
+        <h2>ABOUT US</h2>
+        <ul class="nav-links">
+            <li><a href="test1">
+                    Home</a></li>
+            <li><a href="abo">
+                    About us</a>
+            </li>
+            <li><a href="clt">
+                    Collections</a>
+            </li>
+            <li><a href="cntc">
+                    Contact</a>
+            </li>
+            <li><a href="ofr">
+                    Offers</a>
+            </li>
+            <li><a href="exb">
+                    Exhibition</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="app_form">
+    <h2>Artist Registration From </h2>
+    <form action="{% url 'a' %}" method='POST'>
+        {% csrf_token %} 
+        <div>
+            Full Name:<input type="text" id="name" name="myname" required><br><br>
+            Art Type:<input type="text" id="art" name="myart"required><br><br>
+            Art Name:<input type="text"  id="artname" name="myartname"required><br><br>
+            Artist Age:<input type="text"  id="age" name="myage"required><br><br>
+            Expected Amount:<input type="text" id="Amount" name="myamount" required><br><br>
+            Nationality:<input type="text" id="Nationality" name="mynation" required><br><br>
+            E-mail:<input type="text" id="email" name="myemail"><br><br>
+            Mobile:<input type="text"  id="phone" name="myphone"><br><br>
+
+            <img src="img.png" id="profile-pic" />
+            <input type="file" accept="image/jpeg" id="input-file" name="myimage"><br><br>
+
+            <button type="submit" class="btn"><b>SUBMIT</b></button>
+            <script>
+                let profilePic = document.getElementById("profile-pic");
+                let inputFile = document.getElementById("input-file");
+
+                inputFile, onchange = function () {
+                    profilePic.src = URL.createObjectURL(inputFile.files[0]);
+                }
+            </script>
+
+        </div>
+</div>
+
+
+
+
+
+
+</form>
+
+</div>
+<footer>
+    <p>© 2023 SMV Art Gallery. All Rights Reserved.</p>
+</footer>
+</body>
+
+</html>

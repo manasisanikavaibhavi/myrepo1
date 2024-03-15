@@ -1,0 +1,41 @@
+<html>
+
+<head></head>
+
+<body>
+  <center>
+  {%if Register %}
+  <h1>Report On Registratiojn Form</h1>
+  <table border="20">
+    <thead>
+      
+      <th>Full Nmae</th>
+      <th>Email Address</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      <th>country</th>
+      <th>city</th>
+      <th>region</th>
+      <th>code</th>
+
+    </thead>
+    {%for y in Register %}
+    <tr>
+      <td>{{y.name}}</td>
+      <td>{{y.email}}</td>
+      <td>{{y.phone}}</td>
+      <td>{{y.address}}</td>
+      <td>{{y.country}}</td>
+      <td>{{y.city}}</td>
+      <td>{{y.region}}</td>
+      <td>{{y.code}}</td>
+    </tr>
+    {%endfor%}
+    </thead>
+  </table>
+
+  {%endif%}
+</body>
+</center>
+
+</html>

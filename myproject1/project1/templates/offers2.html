@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Art Gallery</title>
+  <link rel="stylesheet" a href="{% static 'css/off.css' %}">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        SMV ART GALLERY
+      </div>
+      <h1>OFFERS</h1>
+      <ul class="nav-links">
+        <li><a href="test1">
+            Home</a></li>
+        <li><a href="abo">
+            About us</a>
+        </li>
+        <li><a href="clt">
+            Collections</a>
+        </li>
+        <li><a href="cntc">
+            Contact</a>
+        </li>
+        <li><a href="ofr">
+            Offers</a>
+        </li>
+        <li><a href="exb">
+          Exhibition</a>
+      </li>
+      </ul>
+    </nav>
+  </header>
+  <section id="product1" class="section-p1">
+    <h2>OFFERS</h2>
+    <p></p>
+    <div class="pro-container">
+      <div class="pro" onclick="window.location.href='sprot1';">
+        <img src="{% static 'image/artwithartist/horse1.jpg'%}" alt="">
+        <div class="des">
+          <h5>Horses</h5>
+          <p>By Vishnu Sonawane</p>
+          <h4>Rs.1200</h4>
+          <a  href="cart">
+            <button type="button">Add To Cart</button>
+            </a>
+        </div>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct2.html';">
+        <img src="{% static 'image/artwithartist/chuck.jpg'%}" alt="">
+        <div class="des">
+          <h5>abstract</h5>
+          <p>By Chuck Pinson</p>
+          <h4>Rs.1000</h4>
+          <a  href="cart">
+            <button type="button">Add To Cart</button>
+            </a>
+        </div>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct4.html';">
+        <img src="{% static 'image/artwithartist/monet2.jpg'%}" alt="">
+        <div class="des">
+          <h5>Water Lillies</h5>
+          <p>By Claude Monet</p>
+          <h4>Rs.1500</h4>
+          <a  href="cart">
+            <button type="button">Add To Cart</button>
+            </a>
+        </div>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct3.html';">
+        <img src="{% static 'image/artwithartist/munns.jpg'%}" alt="">
+        <div class="des">
+          <h5>Mystic Mermaid</h5>
+          <p>By Shijun Munns</p>
+          <h4>Rs.3000</h4>
+          <a  href="cart">
+            <button type="button">Add To Cart</button>
+            </a>
+        </div>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct5.html';">
+        <img src="{% static 'image/artwithartist/van4.jpg'%}" alt="">
+        <div class="des">
+          <h5>Irises by</h5>
+          <p>By Vincent Van Gogh</p>
+          <h4>Rs.1000</h4>
+          <a  href="cart">
+            <button type="button">Add To Cart</button>
+            </a>
+        </div>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct6.html';">
+        <img src="{% static 'image/artwithartist/coop4.jpg'%}" alt="">
+        <div class="des">
+          <h5>Mid-Morning Basking</h5>
+          <p>By Charice Cooper</p>
+          <h4>Rs.2000</h4>
+          <a  href="cart">
+            <button type="button">Add To Cart</button>
+            </a>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- <div class="pro">
+          <img src="artwithartist/dali.jpg" alt="">
+        <div class="des">
+		  <h5>Butterflies</h5>
+          <p>By Salvador Dali</p>
+		  <h4>Rs.1000</h4>
+		 </div>
+     </div>-->
+
+    </div>
+  </section>
+  <footer>
+    <p>© 2023 SMV Art Gallery. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>

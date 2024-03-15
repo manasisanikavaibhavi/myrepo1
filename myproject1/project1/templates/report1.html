@@ -1,0 +1,41 @@
+<html>
+
+<head></head>
+
+<body>
+  <center>
+    {%if art %}
+    <h1>Report On Artists Form</h1>
+    <table border="20">
+      <thead>
+        <th>Artist Name</th>
+        <th>Artist Type</th>
+        <th>Art name</th>
+        <th>Age</th>
+        <th>Amount</th>
+        <th>Nation</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Image</th>
+      </thead>\
+      {%for k in art %}
+      <tr>
+        <td>{{k.name}}</td>
+        <td>{{k.art}}</td>
+        <td>{{k.artname}}</td>
+        <td>{{k.age}}</td>
+        <td>{{k.Amount}}</td>
+        <td>{{k.Nationality}}</td>
+        <td>{{k.email}}</td>
+        <td>{{k.phone}}</td>
+        <td>{{k.image}}</td>
+      </tr>
+      {%endfor%}
+      </thead>
+    </table>
+
+    {%endif%}
+</body>
+</center>
+
+</html>

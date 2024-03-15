@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Responsive Form Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            margin: 0px;
+            /* display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column; */
+            height: 100vh;
+            background-color: #e0cfde;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        header {
+            background-color: white;
+            color: rgb(0, 0, 0);
+            padding: 0px 0;
+            position: fixed;
+            width:100%;
+            z-index: 100;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        h1{
+            color: #ec89df;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0b080c;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            background-color: #e6d1e9;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .textup {
+            text-align: center;
+            color: rgb(18, 16, 19);
+            font-weight: 700;
+        }
+
+        i {
+            margin-right: 3px;
+        }
+
+        .form-box {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(36, 67, 40, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            margin-left: 30%;
+            width: 500px;
+        }
+
+        form {
+            max-width: 400px;
+            margin-bottom: 0 auto;
+        }
+
+        .radio-group {
+            display: flex;
+            margin-bottom: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 17px;
+            color: rgb(19, 26, 19);
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border-radius: 10px;
+
+        }
+
+        button {
+            background-color: #d19f7e;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 15px;
+            transition: .2s linear;
+        }
+
+        button:hover {
+            background-color: #0a6808;
+            border: none;
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            color: rgb(14, 17, 14);
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+		<nav>
+			<div class="logo">
+				SMV ART GALLERY
+			</div>
+			<h2>Feedback</h2>
+			<ul class="nav-links">
+				<li><a href="test1">
+						Home</a></li>
+				<li><a href="abo">
+						About us</a>
+				</li>
+				<li><a href="clt">
+						Collections</a>
+				</li>
+				<li><a href="cntc">
+						Contact</a>
+				</li>
+				<li><a href="ofr">
+						Offers</a>
+				</li>
+				<li><a href="exb">
+						Exhibition</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+    <h1>Feedback
+    </h1>
+    <div class="form-box">
+        <div class="textup">
+            <i class="fa fa-solid fa-clock"></i>
+            It only takes two minutes!!
+        </div>
+        <form action="{% url 'abc' %}" method='POST'>
+            {% csrf_token %} 
+            <label for="uname">
+                <i class="fa fa-solid fa-user"></i>
+                Name
+            </label>
+            <input type="text" id="uname" name="myname" required>
+
+            <label for="email">
+                <i class="fa fa-solid fa-envelope"></i>
+                Email Address
+            </label>
+            <input type="email" id="email" name="myemail" required>
+
+            <label for="phone">
+                <i class="fa-solid fa-phone"></i>
+                Phone No
+            </label>
+            <input type="tel" id="phone" name="myphone" required>
+
+            <label>
+                <i class="fa-solid fa-face-smile"></i>
+                Do you satisfy with our service?
+            </label>
+            <div class="radio-group">
+                <input type="radio" id="yes" name="satisfy" value="True"  checked >
+                <label for="yes">Yes</label>
+
+                <input type="radio" id="no" name="satisfy" name="satisfy" value="False"  >
+                <label for="no">No</label>
+            </div>
+
+            <label for="msg">
+                <i class="fa-solid fa-comments" style="margin-right: 3px;"></i>
+                Write your Suggestions:
+            </label>
+            <textarea id="msg" name="msg" rows="4" cols="10" required>
+            </textarea>
+            <button type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <footer>
+		<p>© 2023 SMV Art Gallery. All Rights Reserved.</p>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> single offer page</title>
+	<link rel="stylesheet" a href="{% static 'css/off.css' %}">
+	
+</head>
+<body>
+
+<section id="prodetails" class="section-p1">
+<div class="single-pro-image">
+<img src="{% static 'artwithartist/monet1.jpg'%}"  width="100%" id="MainImg" alt="">
+<div class="small-img-group">
+  <div class="small-img-col">
+    <img src="{% static 'artwithartist/monet4.jpg'%}" width="100%" class="small-img" alt="">
+  </div>
+  <div class="small-img-col">
+    <img src="{% static 'artwithartist/monet5.jpg'%}" width="100%" class="small-img" alt="">
+  </div>
+   <div class="small-img-col">
+    <img src="{% static 'artwithartist/monet7.jpg'%}" width="100%" class="small-img" alt="">
+  </div>
+   <div class="small-img-col">
+    <img src="{% static 'artwithartist/monet3.jpg'%}" width="100%" class="small-img" alt="">
+  </div>
+  </div>
+</div>
+<div class="single-pro-details">
+<h6>Sailing at Argenteuil Print</h6>
+<h4>By Claude Monet</h4>
+<h2>offer Price #Rs.1500</h2>
+<p>Size=540*400</p>
+<a href="checkout4.html">
+<button type="button">Buy now</button>
+</a>
+<h4>Product Details</h4>
+<span>Artist: Vishnu Sonavane. Inspired by Hussain, this artist is very well known for his paintings of Running horses. 
+The bold use of colors in the backdrop makes them stand out on the canvas....</span>
+</div>
+</section>
+<section id="product1" class="section-p1">
+<h2>OFFERS</h2>
+<p></p>
+<div class="pro-container">
+   <div class="pro">
+          <img src="{% static 'artwithartist/horse1.jpg'%}" alt="">
+        <div class="des">
+		  <h5>Horses</h5>
+          <p>By Vishnu Sonawane</p>
+		  <h4>Rs.2000</h4>
+		 </div>
+      </div>
+    <div class="pro">
+          <img src="{% static 'artwithartist/chuck.jpg'%}" alt="">
+        <div class="des">
+		  <h5>abstract</h5>
+          <p>By Chuck Pinson</p>
+		  <h4>Rs.1000</h4>
+		 </div>
+     </div>
+	 <div class="pro">
+          <img src="{% static 'artwithartist/monet2.jpg'%}" alt="">
+        <div class="des">
+		  <h5>Water Lillies</h5>
+          <p>By Claude Monet</p>
+		  <h4>Rs.5000</h4>
+		 </div>
+     </div>
+   </section>
+   <script>
+   var MainImg =document.getElementById("MainImg");
+   var smallimg =document.getElementsByClassName("small-img");
+  
+   smallimg[0].onclick = function()
+   {
+   MainImg.src= smallimg[0].src;
+   }
+   smallimg[1].onclick=function(){
+   MainImg.src= smallimg[1].src;
+   }
+   smallimg[2].onclick=function(){
+   MainImg.src= smallimg[2].src;
+   }
+   smallimg[3].onclick=function(){
+   MainImg.src= smallimg[3].src;
+   }
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

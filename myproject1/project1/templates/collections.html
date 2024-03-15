@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Art Gallery</title>
+	<link rel="stylesheet" href="{% static 'css/collection.css' %}">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				SMV ART GALLERY
+			</div>
+			<h2>COLLECTIONS</h2>
+			<ul class="nav-links">
+				<li><a href="test1">
+						Home</a></li>
+				<li><a href="abo">
+						About us</a>
+				</li>
+				<li><a href="clt">
+						Collections</a>
+				</li>
+				<li><a href="cntc">
+						Contact</a>
+				</li>
+				<li><a href="ofr">
+						Offers</a>
+				</li>
+				<li><a href="exb">
+						Exhibition</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<section class="p-slider">
+		<!-- <h3 class="product-slider-head">collections</h3> -->
+		<div class="wrapper">
+			<div class="card">
+				<img src="{% static 'image/Painting art/p8.jpeg' %}" alt="">
+				<div class="info">
+					<h1>PAINTINGS</h1>
+					<a href="paint" class="btn">see more</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="{% static 'image/Doodle images/D9.jpg'%}" alt="">
+				<div class="info">
+					<h1>DOODLE ART</h1>
+					<a href="dool" class="btn">see more</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="{% static 'image/RadhaKrishn Art/Rk1.jpg '%}" alt="">
+				<div class="info">
+					<h1>Radhakrishn</h1>
+					<a href="radh" class="btn">see more</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="{% static 'image/Architecture Art/A3.jpg'%}" alt="">
+				<div class="info">
+					<h1>ARCHITECTURE</h1>
+					<a href="ar" class="btn">see more</a>
+				</div>
+			</div>
+			
+			<div class="card">
+				<img src="{% static 'image/sculpture Art/sculp7.jpg'%}" alt="">
+				<div class="info">
+					<h1>SCULPTURES</h1>
+					<a href="scl" class="btn">see more</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p>© 2023 SMV Art Gallery. All Rights Reserved.</p>
+	</footer>
+</body>
+
+</html>

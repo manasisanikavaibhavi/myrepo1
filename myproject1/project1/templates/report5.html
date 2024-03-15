@@ -1,0 +1,34 @@
+<html>
+
+<head></head>
+
+<body>
+  <center>
+    {%if Feed %}
+    <h1>Report On Feedback Form</h1>
+    <table border="20">
+      <thead>
+        <th> Name</th>
+        <th> Email Address</th>
+        <th>Phone</th>
+        <th>Satisfy</th>
+        <th>write your suggestions</th>
+        
+      </thead>
+      {%for v in Feed %}
+      <tr>
+        <td>{{v.name}}</td>
+        <td>{{v.email}}</td>
+        <td>{{v.phone}}</td>
+        <td>{{v.satisfy}}</td>
+        <td>{{v.msg}}</td>      
+      </tr>
+      {%endfor%}
+      </thead>
+    </table>
+
+    {%endif%}
+</body>
+</center>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT FORM</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            body{
+                background-image: url(pay.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+                overflow-x: hidden;
+            font-family: Helvetica;
+  margin: 0;
+			}
+			
+            .wraaper{
+                width: 600px;
+                padding: 20px 25px;
+                margin: 5px auto;
+                border-radius: 15px;
+                background: rgba(68, 65, 65, 0.4);
+                backdrop-filter: blur(50px);
+                border: 3px solid rgba(255,253,253,0.6);
+            }
+            .wraaper h2{
+                color: bisque;
+                font-size: 30px;
+                padding: 5px;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+            .wraaper h4{
+                padding-bottom:7px ;
+                color: azure;
+                font-size:23px ;
+            
+            }
+            .input_group{
+                margin: 5px auto;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                padding: 5px 0;
+            }
+            .input_box{
+             width: 100%;
+             margin-top: 8px;
+             position: relative;   
+            }
+           .input_box:last-child{
+             margin-right: 0;
+            }
+            .input_box .name{
+                padding: 14px 10px 14px  50px;
+                width: 100%;
+                background: #fff;
+                border: 1px solid #0003;
+                outline: none;
+                letter-spacing: 1px;
+                transition: .3s;
+                border-radius:3px ;
+                color: #333;
+            }
+            .input_box .name:focus,
+            .dob:focus{
+                -webkit-box-shadow: 0 0 2px 1px #000 ;
+                -moz-box-shadow:0 0 2px 1px #0003 ;
+				box-shadow:0 0 2px 1p #000;
+				border:1px solid black;
+				
+            }
+			.input_box .icon{
+			width:45px;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			position:absolute;
+			top:0;
+			left:0;
+			bottom:0;
+			color:#000;
+			background:#f1f1f1;
+			border-radius:2px 0 0 2px;
+			transition:.3s;
+			font-size:20px;
+			pointer-events:none;
+			border:1px solid red;
+			border-right:none;
+			}
+		.name:focus + .icon{
+		 background:#000;
+		 color:#fff;
+		 border-right: 1px solid #000;
+		 border:none;
+		 transition: 1s;
+		}
+		.dob{
+		 width:30%;
+		 padding:14px;
+		 text-align:center;
+		 background-color:#fcfcfc;
+		 transition:.3s;
+		 outline:none;
+		 border:1px solid #fff;
+		 border-radius:3px;
+		}
+		.radio{
+		display:none;
+		}
+		.input_box label{
+		width:50%;
+		padding:11px;
+		background:#fff;
+		display:inline-block;
+		float:left;
+		text-align:center;
+		border:1px solid black;
+		}
+		.input_box label:first-of-type{
+		border-top-left-radius:3px;
+		border-bottom-right-radius:4px;
+		border-right:none;
+		}
+		.input_box label:last-of-type{
+		border-top-left-radius:3px;
+		border-bottom-right-radius:4px;
+		}
+		.radio:checked + label{
+		background:#000;
+		color:#fff;
+		transition:.5s;
+		}
+		.input_box button{
+		width:100%;
+		background:none;
+		color:#fff;
+		padding:15px;
+		border-right:4px;
+		font-size:15px;
+		transition:all .3s ease;
+		border-radius:5px;
+		border:2px solid #fff;
+		}
+		.input_box button:hover{
+		cursor:pointer;
+		background:#fff;
+		border:2px solid #000;
+		color:#000;
+		}
+		.site-header { 
+  border-bottom: 1px solid #fff;
+  padding: .5em 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-identity h1 {
+  font-size: 1.5em;
+  margin: .6em 0;
+  display: inline-block;
+}
+
+
+.site-navigation ul, 
+.site-navigation li {
+  margin: 0; 
+  padding: 0;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  align-items:center;
+}
+		
+            
+</style>
+</head>
+<body>
+<!-- <header class="site-header">
+  <div class="site-identity">
+    <h1><a href="#">Site Name</a></h1>
+  </div>  
+  <nav class="site-navigation">
+    <ul class="nav">
+      <li><a href="#">HOME</a></li> 
+      <li><a href="#">EXHIBITION</a></li> 
+      <li><a href="#">ADD TO CART</a></li> 
+	  <li><a href="#">OFFERS</a></li> 
+	  <li><a href="#">CONTACT-US</a></li> 
+    </ul>
+  </nav>
+</header> -->
+    <div class="wraaper">
+        <h2>PAYMENT FORM</h2>
+        <form action="{% url 'pmt' %}" method="post" >
+             {%csrf_token%}
+            <h4>Account</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Full Name" required class="name" name="name">
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder=" Name on Card" required class="name" name="cardname">
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Email Address" required class="name" name="email">
+                    <i class="fa fa-envelope dot icon"></i>
+
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Address" required class="name" name="addr">
+                    <i class="fa-solid fa-location-dot icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="City" required class="name" name="city">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div>
+          
+       
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" class="radio" id="bc1" checked>
+                    <label for="bc1">
+                        <span>
+                            <i class="fab fa-cc-visa"></i>
+                            Credit Cart
+                        </span>
+                    </label>
+                    <input type="radio" name="pay" class="radio" id="bc2" checked>
+                    <label for="bc2">
+                        <span>
+                            <i class="fab fa-cc-paypal"></i>
+                            Paypal
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="cardno" class="name" placeholder="card Number 1111-2222-3333-4444" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+             <div class="input_group">
+                <div class="input_box">
+                    <input type="phone" name="phoneno" class="name" placeholder="phone-number" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="cvc" class="name" placeholder="Card CVC 555" required>
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                       <input type="number" placeholder="Exp Month" class="name" name="month" required>
+                        <i class="fas fa-calendar-alt icon" aria-hidden="true"></i>
+                    </div>
+                  <div class="input_box">
+                    <input type="number" placeholder="Exp year" class="name" name="year" required>
+                    <i class="fas fa-calendar-alt icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_box">
+                <input type="number" placeholder="Enter Amount" required name="amount" class="name">
+                <i class="fa-solid fa-money-bill icon" aria-hidden="true"></i>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">PAY NOW</button>
+                </div>
+            </div>
+        </form>
+    </div>
+   </body>
+</html>

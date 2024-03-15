@@ -1,0 +1,202 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery Exhibition</title>
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: hwb(324 80% 6%);
+    }
+
+    header {
+      background-color: white;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+header h1{
+text-align: center;
+  text-transform: uppercase;
+  font-size: large;
+}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px auto;
+      padding: 0 15px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d893e4;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-right: 20px;
+    }
+
+    .nav-links a {
+      color: rgb(0, 0, 0);
+      padding: 0px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      background-color: #e6d1e9;
+      border-radius: 4px;
+      color: white;
+    }
+ section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 15px;
+    }
+
+    .art-piece {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(219, 159, 224, 0.1);
+    }
+
+    .art-piece img {
+      max-width: 100%;
+      height: auto;
+
+    }
+
+    .art-info {
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+  
+    <nav>
+      <div class="logo">
+        SMV ART GALLERY
+      </div>
+      <ul class="nav-links">
+        <li><a href="test1">
+            Home</a></li>
+        <li><a href="abo">
+            About us</a>
+        </li>
+        <li><a href="clt">
+            Collections</a>
+        </li>
+        <li><a href="cntc">
+            Contact</a>
+        </li>
+        <li><a href="ofr">
+            Offers</a>
+        </li>
+        <li><a href="exb">
+            Exhibitions</a>
+        </li>
+      </ul>
+    </nav>
+     <h1>Exhibitions<br>
+    Discover the beauty of art</h1>
+   
+
+  </header>
+
+  <section>
+    <div class="art-piece">
+      <img src="{% static 'image/exibition/exhiP1.jpg'%}" alt="Artwork 1">
+      <div class="art-info">
+        <h2>Whispers of Colors</h2>
+        <p>>We are happy to invite you to the special solo-exhibition of Reinier Asmoredjo, titled Mi Gudu; 40 jaar beeldend kunstenaar (My Treasure; 40 years visual artist), opening on March 7. With this exhibition, the artist celebrates his active and multi-faceted art career of already four decades, together with the public. As an artist who is highly productive, Reinier has once again created an impressive collection of works, ranging from paintings in various sizes on canvas,
+          paper and foam board, to...</p>
+      </div>
+    </div>
+
+    <div class="art-piece">
+      <img src="{% static 'image/exibition/exhisulp2.jpg'%}" alt="Artwork 2">
+      <div class="art-info">
+        <h2>Sulpted Dreams</h2>
+
+        <p>Dear art friends, Readytex Art Gallery kindly invites you to visit the special exhibition ‘In de Blaauwe Boon’ (In the Blue Bean), curated by literary historian Hilde Neus, whose focus is on describing women’s histories. This exhibition is inspired by her research into the manumitted Caatje van Heijne, who owned two houses on Maagdenstraat and Jodenbreestraat, close to where Readytex Art Gallery is currently located. Caatje van Heijne was also owner of the
+          coffee plantation Dwingelo. In Suriname, the coffee that.</p>
+      </div>
+    </div>
+    <div class="art-piece">
+      <img src="{% static 'image/exibition/exhiarc4.jpg'%}" alt="Artwork 3">
+      <div class="art-info">
+        <h2>Architettura</h2>
+
+        <p>We are excited to invite you to a special group exhibition titled Compositie. Spreken in patronen (Composition. Speaking in patterns). Inspired by alakondre, visual artist Dhiradj Ramsamoedj, the curator of this exhibition, created a unique arrangement to showcase artworks from eighteen artists affiliated to Readytex Art Gallery. “Our society is a ‘mamjo’ (patchwork) of various ethnicities. We have an alakondre structure and are dynamic.
+          That is why I took the courage and freedom to use this as a point of..</p>
+      </div>
+    </div>
+    <div class="art-piece">
+      <img src="{% static 'image/exibition/exhidoodle2.jpg'%}" alt="Artwork 4">
+      <div class="art-info">
+        <h2>Beyound Imagination</h2>
+
+        <p>Dear art friends, Get ready to enjoy yet another beautiful solo exhibition at Readytex Art Gallery this November. Visual artist Sunil Puljhun will present a new collection of artworks in his exhibition titled Sanskrti ka Sanrakshan (Preservation of culture). A collection in which Sunil exhibits a surprising new approach to the theme that he has been focusing on in the past several years.  Where his imagery 
+          previously emphasized the darker side of human nature, Sunil currently focuses on something that he...</p>
+      </div>
+    </div>
+    <div class="art-piece">
+      <img src="{% static 'image/exibition/exhiRK3.jpg'%}" alt="Artwork 5">
+      <div class="art-info">
+        <h2>The Love frames</h2>
+
+        <p>SMV Art Gallery and curators Kenneth Flijders and Shaundell Horton, are happy to invite you to visit the new exhibition Beyond Bondage, starting from July 6. For this exhibition the curators chose a special selection of artwork from various artists, to commemorate this year’s 160th anniversary of Keti Koti, the abolishment of slavery, on the 1st of July. In addition to his role as co-curator, visual artist Kenneth Flijders
+          is also the ‘Local Master’ of Beyond Bondage. With his...</p>
+      </div>
+    </div>
+    <div class="art-piece">
+      <img src="{% static 'image/exibition/indian2.jpg'%}"alt="Artwork 6">
+      <div class="art-info">
+        <h2>Artistry Unleashed</h2>
+
+        <p>Readytex Art Gallery is pleased to invite you to the exhibition 'Muddy Waters', an artistic reflection on the Amazon Biennale that opened for the first time this year in the city of Belém in Brazil, and for which works by five of our artists were also selected by the organization. The significance of the waters of the Amazon for local life is a central theme in the Amazon Biennale.
+          In 'Artistry Unleashed', curators Aruna Mungra and Miguel Keerveld add to...</p>
+      </div>
+    </div>
+
+    <!-- Add more art pieces as needed -->
+
+  </section>
+
+
+  <footer>
+    <p>© 2023 SMV Art Gallery. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>

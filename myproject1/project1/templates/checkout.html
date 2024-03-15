@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Art Gallery</title>
+	<link rel="stylesheet" a href="{% static 'css/checkout.css' %}">
+
+</head>
+
+<body>
+	<header>
+		<nav>
+		<div class="logo">
+			SMV ART GALLERY
+		</div>
+			<h2>BILLING/SHIPPING DETAILS</h2>
+			
+			<ul class="nav-links">
+				<li><a href="test1">
+						Home</a></li>
+				<li><a href="abo">
+						About us</a>
+				</li>
+				<li><a href="clt">
+						Collections</a>
+				</li>
+				<li><a href="cntc">
+						Contact</a>
+				</li>
+				<li><a href="ofr">
+						Offers</a>
+				</li>
+				<li><a href="exb">
+						Exhibition</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- <header>
+	  <div class="menu-bar">
+	  <div class="menu">
+	  <ul>
+	   <li><a href="index.html">Home</a></li>
+	   <li><a href="exhibition.html">Exhibition</a></li>
+	   <li><a href="offers2.html">OFFers</a></li>
+		 <li><a href="reviews.html">Reviews</a></li>
+	     <li><a href="collections.html">Collections</a></li>
+	  </ul>
+	 </div>
+	    <div class="search-bar">
+		<form>
+		<div class="form-group">
+		   <input type="text" class="form-control" name="search" placeholder="Search">
+		</div>
+		</form>
+		</div>
+	 </div>
+	 
+	 </header> -->
+	<main>
+
+		<div class="checkout-page">
+			<div class="billing-details">
+				<form class="checkout-form">
+					<h4>Shipping Details</h4>
+					<div class="form-inline">
+						<div class="form-group">
+							<label>First Name</label>
+							<input type="text" name="fname" required>
+						</div>
+						<div class="form-group">
+							<label>Last Name</label>
+							<input type="text" name="lname" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Artist Name</label>
+						<input type="text" name="aname" required>
+					</div>
+					<div class="form-inline">
+						<div class="form-group">
+							<label>Country</label>
+							<select name="country" required>
+								<option value="">---Select a Country---</option>
+								<option value="india">India</option>
+								<option value="india">Germany</option>
+								<option value="india">Belgium</option>
+								<option value="india">Bangladesh</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>City</label>
+							<select name="country" required>
+								<option value="">---Select a City---</option>
+								<option value="sangli">sangli</option>
+								<option value="kolhapur">kolhapur</option>
+								<option value="tasgaon">Tasgaon</option>
+								<option value="pune">Pune</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Address</label>
+						<textarea name="address" rows="4" required></textarea>
+					</div>
+					<h4>Contact Details</h4>
+					<div class="form-inline">
+						<div class="form-group">
+							<label>Contact</label>
+							<input type="text" name="Contact" required>
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="email" name="email" required>
+						</div>
+					</div>
+					<h4>Additional Details(optional)</h4>
+					<div class="form-group">
+						<label>Order Note</label>
+						<textarea name="address" rows="5"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="order-summary">
+				<div class="checkout-total">
+					<h3>Order Summary</h3>
+					<ul>
+						<li>Cart Amount:<span>Rs.1200</span> </li>
+						<li>Delivery Charges:<span>RS.100</span> </li>
+						<li>Less Discount@ 10%:<span>-13.rs</span> </li>
+						<br>
+						<li> Total Amount:<span>1287</span></li>
+						<br>
+
+						<br>
+						<li><input type="radio" name="payment">Cash On Delivery</li>
+						<li><input type="radio" class="easypaisa" name="payment" value="easypaisa">SMV Account</li>
+						<li>
+							<textarea id="easypaisaText"
+								rows="5">please deposit the payment in our SMV account 030x-xxxxxx after confirm payment kindly send us payment slip and Order transaction id on above number.</textarea>
+						</li>
+						<li><input type="radio" name="payment">Bank Transferred</li>
+						<!-- <li><button style="font-size:20px" value="submit" onclick="showAlert()">Place Order</button><br><br></li> -->
+						<li><input type="submit" name="checkout" value="Place Order" onclick="showAlert()"></li>
+				</div>
+
+			</div>
+
+		</div>
+		<script language="javascript">
+			function showAlert() {
+				var mytext = "Our order is successfully placed..!";
+				alert(mytext);
+			}  
+		</script>
+		<footer>
+			<p>© 2023 SMV Art Gallery. All Rights Reserved.</p>
+		</footer>
+		<!-- <button style="font-size:20px" ; color:white; background-color:black; border:2px; padding:3px;
+	value="submit" onclick="showAlert()">Place Order</button><br><br> -->
+	</main>
+</body>
+
+</html>

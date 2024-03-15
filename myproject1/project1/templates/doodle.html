@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> collections  details</title>
+  <link rel="stylesheet" a href="{% static 'css/art7.css' %}">
+  
+</head>
+<body>
+ <div class="container">
+    <h1> Gallery collection </h1>
+    <div class="image-container">
+      <div class="image"><img src ="{% static 'image/Doodle images/D1.jpg'%}" alt=""></div>
+     <div class="image"><img src ="{% static 'image/Doodle images/D2.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D3.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D4.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D5.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D6.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D7.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D8.jpg'%}" alt=""></div>
+      <div class="image"><img src ="{% static 'image/Doodle images/D9.jpg'%}" alt=""></div>
+    </div>
+   
+    <div class="popup-image">
+    <span>&times;</span>
+       <img src="{% static Doodle images/D1.jpg'%}" alt="">
+   </div>
+ </div>
+ <script>
+  document.querySelectorAll('.image-container img'). forEach(image =>{
+    image.onclick =() =>{
+       document.querySelector('.popup-image').style.display ='block';
+       document.querySelector('.popup-image img').src = image.getAttribute('src')
+    }
+  });
+ document .querySelector('.popup-image span').onclick=() =>{
+  document.querySelector('.popup-image').style.display ='none';
+}
+ </script>
+</body>
+</html>

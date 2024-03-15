@@ -1,0 +1,31 @@
+<html>
+
+<head></head>
+
+<body>
+  <center>
+    {%if cont1 %}
+    <h1>Report On Contact Form</h1>
+    <table border="20">
+      <thead>
+        <th> full name</th>
+        <th> Email</th>
+        <th>Type your message</th>
+        
+      </thead>
+      {%for r in cont1 %}
+      <tr>
+        <td>{{r.name}}</td>
+        <td>{{r.email}}</td>
+        <td>{{r.message}}</td>
+        
+      </tr>
+      {%endfor%}
+      </thead>
+    </table>
+
+    {%endif%}
+</body>
+</center>
+
+</html>
